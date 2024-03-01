@@ -91,6 +91,16 @@ internal class Program
                 defaults: new { controller = "Search", action = "GenericSearch" },
                 constraints: new { t = new TRouteConstraint("search") });
 
+        if (!System.IO.File.Exists("/app/test.xml"))
+        {
+            Console.WriteLine("File not found!!!");
+            Console.WriteLine("File not found!!!");
+            Console.WriteLine("File not found!!!");
+            Console.WriteLine("File not found!!!");
+            Console.WriteLine("File not found!!!");
+            Console.WriteLine("File not found!!!");
+        }
+
         app.Run();
     }
 }
