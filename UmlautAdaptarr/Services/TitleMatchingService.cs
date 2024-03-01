@@ -165,6 +165,8 @@ namespace UmlautAdaptarr.Services
         {
             var titleMatchVariations = searchItem.TitleMatchVariations;
             var expectedTitle = searchItem.ExpectedTitle;
+            Console.WriteLine("FindAndReplaceForMoviesAndTV - expectedTitle: " + expectedTitle);
+            Console.WriteLine("FindAndReplaceForMoviesAndTV - matchVariations: " + string.Join(", ", titleMatchVariations));
             var variationsOrderedByLength = titleMatchVariations!.OrderByDescending(variation => variation.Length);
 
             // Attempt to find a variation that matches the start of the original title

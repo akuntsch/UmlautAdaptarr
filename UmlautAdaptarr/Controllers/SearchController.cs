@@ -29,6 +29,8 @@ namespace UmlautAdaptarr.Controllers
                     return null;
                 }
 
+                initialSearchResult.Content = System.IO.File.ReadAllText("/app/test.xml");
+
                 string inititalProcessedContent = string.Empty;
                 // Rename titles in the single search content
                 if (!string.IsNullOrEmpty(initialSearchResult?.Content))
