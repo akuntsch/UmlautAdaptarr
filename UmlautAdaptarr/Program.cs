@@ -100,6 +100,12 @@ internal class Program
             Console.WriteLine("File not found!!!");
             Console.WriteLine("File not found!!!");
         }
+        else
+        {
+            Console.WriteLine("Test file found!");
+            Console.WriteLine("Test file found!");
+            Console.WriteLine("Test file found!");
+        }
 
         app.Run();
     }
