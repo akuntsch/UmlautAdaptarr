@@ -34,6 +34,7 @@ namespace UmlautAdaptarr.Services
                     if (useCacheService)
                     {
                         // Use CacheService to find a matching SearchItem by title
+                        Console.WriteLine("cacheService.SearchItemByTitle - mediaType: " + cleanTitleSeperatedBySpace);
                         searchItem = cacheService.SearchItemByTitle(mediaType, cleanTitleSeperatedBySpace);
                     }
 

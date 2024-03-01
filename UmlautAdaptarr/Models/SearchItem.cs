@@ -68,6 +68,27 @@ namespace UmlautAdaptarr.Models
 
                 GenerateVariationsForTV(GermanTitle, mediaType, aliases);
             }
+
+            if (externalId == "444783")
+            {
+                Console.WriteLine("############################################################");
+                Console.WriteLine("############################################################");
+                Console.WriteLine("############################################################");
+                Console.WriteLine("############################################################");
+                Console.WriteLine("############################################################");
+                Console.WriteLine("############################################################");
+                Console.WriteLine("Expected Title: " + ExpectedTitle);
+                Console.WriteLine("German Title: " + GermanTitle);
+                Console.WriteLine("Aliases: " + string.Join(",", aliases));
+                Console.WriteLine("TitleSearchVariations: " + string.Join(",", TitleSearchVariations));
+                Console.WriteLine("TitleMatchVariations: " + string.Join(",", TitleMatchVariations));
+                Console.WriteLine("############################################################");
+                Console.WriteLine("############################################################");
+                Console.WriteLine("############################################################");
+                Console.WriteLine("############################################################");
+                Console.WriteLine("############################################################");
+                Console.WriteLine("############################################################");
+            }
         }
 
         private void GenerateVariationsForTV(string? germanTitle, string mediaType, string[]? aliases)
