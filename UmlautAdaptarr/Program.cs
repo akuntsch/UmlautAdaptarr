@@ -105,6 +105,7 @@ internal class Program
             Console.WriteLine("Test file found!");
             Console.WriteLine("Test file found!");
             Console.WriteLine("Test file found!");
+            Console.WriteLine(File.ReadAllText("/app/test.xml"));
         }
 
         app.Run();
