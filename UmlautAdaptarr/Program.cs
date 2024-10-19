@@ -13,8 +13,6 @@ internal class Program
     }
     private static async Task MainAsync(string[] args)
     {
-        Helper.ShowLogo();
-        Helper.ShowInformation();
         // TODO:
         // add option to sort by nzb age
         var builder = WebApplication.CreateBuilder(args);
@@ -40,7 +38,7 @@ internal class Program
             // TODO cache size limit? option?
             //options.SizeLimit = 20000;
         });
-
+        
         builder.Services.AllowResolvingKeyedServicesAsDictionary();
         builder.Services.AddControllers();
         builder.AddTitleLookupService();
@@ -56,6 +54,11 @@ internal class Program
         builder.Services.AddSingleton<IHostedService, HttpProxyService>();
 
         var app = builder.Build();
+        
+        if (app.Configuration.GetValue<bool>("IpLeakTest:Enabled")) {
+            Helper.ShowLogo();
+            await Helper.ShowInformation();
+        }
 
         GlobalStaticLogger.Initialize(app.Services.GetService<ILoggerFactory>()!);
         app.UseHttpsRedirection();
